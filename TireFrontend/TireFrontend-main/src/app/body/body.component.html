@@ -1,0 +1,172 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<div class="container">
+  <!-- Section - Numar Inmatriculare -->
+  <div class="first-inner-container">
+    <div class="title"><h1>Numar inmatriculare</h1></div>
+
+    <input
+      type="text"
+      placeholder="Introdu numarul de inmatriculare"
+      class="custom-input"
+    />
+
+    <app-camera></app-camera>
+
+    <button
+      class="btn save-btn"
+      (click)="saveImageToDatabase()"
+      *ngIf="isImageCaptured"
+      [disabled]="!isImageCaptured"
+    >
+      Save Image
+    </button>
+    <button
+      class="btn reset-btn"
+      (click)="resetImage()"
+      *ngIf="isImageCaptured"
+    >
+      Refă poza
+    </button>
+    <div *ngIf="isImageCaptured">Image saved successfully!</div>
+  </div>
+  <!-- END Section - Numar Inmatriculare  -->
+  <!-- Section - Numar Km -->
+  <div class="second-inner-container">
+    <div class="title"><h1>Numar kilometrii</h1></div>
+
+    <input
+      type="file"
+      accept="image/*"
+      capture="environment"
+      class="image-input"
+      *ngIf="!showCamera"
+    />
+
+    <input
+      type="text"
+      placeholder="Introdu numarul de kilometrii"
+      class="custom-input"
+    />
+
+    <button
+      class="btn"
+      (click)="toggleCamera()"
+      *ngIf="!showCamera"
+      [disabled]="isImageCaptured"
+    >
+      <i class="fa fa-camera"></i>
+    </button>
+    <button class="btn close-btn" (click)="closeCamera()" *ngIf="showCamera">
+      <i class="fa fa-times"></i>
+    </button>
+    <app-camera *ngIf="showCamera"></app-camera>
+
+    <button
+      class="btn save-btn"
+      (click)="saveImageToDatabase()"
+      *ngIf="isImageCaptured"
+      [disabled]="!isImageCaptured"
+    >
+      Save Image
+    </button>
+    <button
+      class="btn reset-btn"
+      (click)="resetImage()"
+      *ngIf="isImageCaptured"
+    >
+      Refă poza
+    </button>
+    <div *ngIf="isImageCaptured">Image saved successfully!</div>
+  </div>
+  <!-- END Section - Numar Km -->
+  <!-- Section Profil 1 -->
+  <div class="section-profil1">
+    <div class="title"><h1>Masuratoare Profil 1</h1></div>
+    <input
+      type="text"
+      placeholder="Introdu numarul de inmatriculare"
+      class="custom-input"
+    />
+
+    <app-camera></app-camera>
+
+    <button
+      class="btn save-btn"
+      (click)="saveImageToDatabase()"
+      *ngIf="isImageCaptured"
+      [disabled]="!isImageCaptured"
+    >
+      Save Image
+    </button>
+    <button
+      class="btn reset-btn"
+      (click)="resetImage()"
+      *ngIf="isImageCaptured"
+    >
+      Refă poza
+    </button>
+    <div *ngIf="isImageCaptured">Image saved successfully!</div>
+  </div>
+  <!-- END Section - Profil 1 -->
+  <!-- Section Profil 2 -->
+  <div class="section-profil2">
+    <div class="title"><h1>Masuratoare Profil 2</h1></div>
+    <input
+      type="text"
+      placeholder="Introdu numarul de inmatriculare"
+      class="custom-input"
+    />
+
+    <app-camera></app-camera>
+
+    <button
+      class="btn save-btn"
+      (click)="saveImageToDatabase()"
+      *ngIf="isImageCaptured"
+      [disabled]="!isImageCaptured"
+    >
+      Save Image
+    </button>
+    <button
+      class="btn reset-btn"
+      (click)="resetImage()"
+      *ngIf="isImageCaptured"
+    >
+      Refă poza
+    </button>
+    <div *ngIf="isImageCaptured">Image saved successfully!</div>
+  </div>
+  <!-- END Section - Profil 2 -->
+  <!-- Section Profil 3-->
+  <div class="section-profil3">
+    <div class="title"><h1>Masuratoare Profil 3</h1></div>
+    <input
+      type="text"
+      placeholder="Introdu numarul de inmatriculare"
+      class="custom-input"
+    />
+
+    <app-camera></app-camera>
+
+    <button
+      class="btn save-btn"
+      (click)="saveImageToDatabase()"
+      *ngIf="isImageCaptured"
+      [disabled]="!isImageCaptured"
+    >
+      Save Image
+    </button>
+    <button
+      class="btn reset-btn"
+      (click)="resetImage()"
+      *ngIf="isImageCaptured"
+    >
+      Refă poza
+    </button>
+    <div *ngIf="isImageCaptured">Image saved successfully!</div>
+  </div>
+  <!-- END Section - Profil 3 -->
+</div>

@@ -1,0 +1,67 @@
+.camera-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.camera-container > ng-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.webcam {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.btn {
+  width: 100px;
+  background-color: #dddc01;
+  height: 30px;
+  margin: 10px;
+}
+.btn:hover {
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-transition: background 1s, border-radius 1s;
+  transition: background 1s, border-radius 1s;
+}
+
+.captured {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.button-group {
+  display: flex;
+  margin-top: 10px;
+}
+
+.button-group button {
+  margin-bottom: 20px;
+}
+.success-msg {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .webcam {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .webcam {
+    width: 300px;
+  }
+}
